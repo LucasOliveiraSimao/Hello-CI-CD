@@ -34,4 +34,4 @@ jobs:
          ./gradlew test
          
     - name: Deploy to Play Store
-       echo ${{ secrets.TEST_KEY}}
+      run: echo ${{ secrets.TEST_KEY}}
