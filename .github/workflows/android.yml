@@ -17,6 +17,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
+        
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v2
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
@@ -34,8 +37,9 @@ jobs:
          ./gradlew test
          
     - name: Deploy to Play Store
-      uses: fastlane/actions/play_store_deploy@master
+      uses: r0adkll/upload-google-play@v1
       with:
-        service_account_json: ${{ secrets.TEST_KEY }}
-        package_name: com.lucassimao.helloci_cd
-        track: internal
+       serviceAccountJsonPlainText: ${{ secrets.TEST_KEY }}
+       packageName: com.lucassimao.helloci_cd
+       releaseFiles: app/build/outputs/bundle/release/*.aab
+       track: internal
