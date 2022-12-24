@@ -34,7 +34,7 @@ jobs:
          ./gradlew test
          
     - name: Deploy to Play Store
-      uses: actions/play_store_deploy@master
+      uses: fastlane/actions/play_store_deploy@master
       with:
         service_account_json: ${{ secrets.TEST_KEY }}
         package_name: com.lucassimao.helloci_cd
