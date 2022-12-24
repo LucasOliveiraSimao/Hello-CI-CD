@@ -19,8 +19,8 @@ jobs:
         cache: gradle
         
     - name: Hello
-      run: |
-       echo ${{ secrets.KEY }}
+      with:
+       super_secret: echo ${{ secrets.KEY }}
          
     - name: Deploy to Play Store
       uses: r0adkll/upload-google-play@v1
