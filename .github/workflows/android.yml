@@ -21,11 +21,3 @@ jobs:
     - name: Hello
       with:
        super_secret: echo ${{ secrets.KEY }}
-         
-    - name: Deploy to Play Store
-      uses: r0adkll/upload-google-play@v1
-      with:
-       serviceAccountJsonPlainText: ${{ secrets.TEST_KEY }}
-       packageName: com.lucassimao.helloci_cd
-       releaseFiles: app/build/outputs/bundle/release/*.aab
-       track: internal
