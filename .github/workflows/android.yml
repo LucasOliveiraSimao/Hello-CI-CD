@@ -34,4 +34,6 @@ jobs:
          ./gradlew test
          
     - name: Deploy to Play Store
-      run: echo ${{ secrets.TEST_KEY}}
+      uses: fastlane/actions/play_store_deploy@master
+      with:
+        service_account_json: ${{ secrets.TEST_KEY}}
