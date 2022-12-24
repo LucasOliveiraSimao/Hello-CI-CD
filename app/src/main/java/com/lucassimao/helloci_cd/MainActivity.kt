@@ -1,4 +1,4 @@
-git package com.lucassimao.helloci_cd
+package com.lucassimao.helloci_cd
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
