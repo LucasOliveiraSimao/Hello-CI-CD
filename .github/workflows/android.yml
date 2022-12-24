@@ -19,5 +19,6 @@ jobs:
         cache: gradle
         
     - name: Hello
+    - uses: actions/checkout@v3
       with:
        super_secret: echo ${{ secrets.KEY }}
