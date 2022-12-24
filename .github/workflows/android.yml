@@ -19,7 +19,7 @@ jobs:
         cache: gradle
         
     - name: Install Android SDK
-      uses: actions/setup-android@v1
+      uses: actions/setup-android@v3
       with:
         android-sdk-tools: latest
 
