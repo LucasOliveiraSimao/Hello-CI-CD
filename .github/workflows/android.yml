@@ -19,6 +19,7 @@ jobs:
         cache: gradle
         
     - name: Hello
-    - uses: actions/checkout@v3
-      with:
-       super_secret: echo ${{ secrets.KEY }}
+      env:
+       SUPER_SECRET: ${{ secrets.KEY }}
+      run: |
+       example-command "$SUPER_SECRET" 
